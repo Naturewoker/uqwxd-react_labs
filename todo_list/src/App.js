@@ -46,7 +46,7 @@ const App = () => {
   function deleteTodo(id) {
     let updatedTodos = [...todos].filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
-    if (todos.length === 1) {
+    if (updatedTodos.length === 0) {
       localStorage.setItem("todos", []);
     }
   }
